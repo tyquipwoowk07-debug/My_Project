@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data table="Booking">
+    <record>
+        <BOOKING_ID>1</BOOKING_ID>
+        <ISSUE>01.05.2025</ISSUE>
+        <RETURN /><Librarian_ID>1</Librarian_ID><User_ID>2</User_ID><Status_ID>3</Status_ID><Status><STATUS_ID>3</STATUS_ID><Name>Забронировано</Name></Status><User><USER_ID>2</USER_ID><Login>Юзер-абьюзер</Login><Password>def</Password></User><Librarian><LIBRARIAN_ID>1</LIBRARIAN_ID><Login>Люциус</Login><Password>12345</Password></Librarian></record><record><BOOKING_ID>2</BOOKING_ID><ISSUE>05.05.2025</ISSUE><RETURN>15.05.2025</RETURN><Librarian_ID>1</Librarian_ID><User_ID>1</User_ID><Status_ID>1</Status_ID><Status><STATUS_ID>1</STATUS_ID><Name>Доступно</Name></Status><User><USER_ID>1</USER_ID><Login>Юзер-лузер</Login><Password>abc</Password></User><Librarian><LIBRARIAN_ID>1</LIBRARIAN_ID><Login>Люциус</Login><Password>12345</Password></Librarian></record><record><BOOKING_ID>3</BOOKING_ID><ISSUE>10.05.2025</ISSUE><RETURN>25.05.2025</RETURN><Librarian_ID>2</Librarian_ID><User_ID>3</User_ID><Status_ID>2</Status_ID><Status><STATUS_ID>2</STATUS_ID><Name>Нет в наличии</Name></Status><User><USER_ID>3</USER_ID><Login>Биба</Login><Password>ghi</Password></User><Librarian><LIBRARIAN_ID>2</LIBRARIAN_ID><Login>Жорик</Login><Password>54321</Password></Librarian></record></data>

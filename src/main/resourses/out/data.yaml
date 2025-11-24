@@ -1,0 +1,54 @@
+-
+  BOOKING_ID: 1
+  ISSUE: 01.05.2025
+  RETURN: 
+  Librarian_ID: 1
+  User_ID: 2
+  Status_ID: 3
+  Status:
+    STATUS_ID: 3
+    Name: Забронировано
+  User:
+    USER_ID: 2
+    Login: Юзер-абьюзер
+    Password: def
+  Librarian:
+    LIBRARIAN_ID: 1
+    Login: Люциус
+    Password: 12345
+-
+  BOOKING_ID: 2
+  ISSUE: 05.05.2025
+  RETURN: 15.05.2025
+  Librarian_ID: 1
+  User_ID: 1
+  Status_ID: 1
+  Status:
+    STATUS_ID: 1
+    Name: Доступно
+  User:
+    USER_ID: 1
+    Login: Юзер-лузер
+    Password: abc
+  Librarian:
+    LIBRARIAN_ID: 1
+    Login: Люциус
+    Password: 12345
+-
+  BOOKING_ID: 3
+  ISSUE: 10.05.2025
+  RETURN: 25.05.2025
+  Librarian_ID: 2
+  User_ID: 3
+  Status_ID: 2
+  Status:
+    STATUS_ID: 2
+    Name: Нет в наличии
+  User:
+    USER_ID: 3
+    Login: Биба
+    Password: ghi
+  Librarian:
+    LIBRARIAN_ID: 2
+    Login: Жорик
+    Password: 54321
