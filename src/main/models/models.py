@@ -98,6 +98,3 @@ class Reviews:
         self.BOOK_ID = BOOK_ID
         self.Review = Review
         self.Score = Score
-
-
-

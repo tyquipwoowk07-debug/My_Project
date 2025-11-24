@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59198c20-ed97-40a3-98bf-7d4575b990b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/database/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/mainDataBase.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resourses/Auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resourses/User_Actions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resourses/outdb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="59198c20-ed97-40a3-98bf-7d4575b990b4" name="Changes" comment="update models">
       <change beforePath="$PROJECT_DIR$/src/main/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
