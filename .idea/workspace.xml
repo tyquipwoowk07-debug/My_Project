@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59198c20-ed97-40a3-98bf-7d4575b990b4" name="Changes" comment="update models">
-      <change beforePath="$PROJECT_DIR$/src/main/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/models/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="59198c20-ed97-40a3-98bf-7d4575b990b4" name="Changes" comment="update models" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +38,14 @@
       <option name="presentableId" value="Default" />
       <updated>1760707346727</updated>
     </task>
+    <task id="LOCAL-00001" summary="update models">
+      <created>1764013722246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764013722246</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -53,5 +59,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update models" />
+    <option name="LAST_COMMIT_MESSAGE" value="update models" />
   </component>
 </project>
