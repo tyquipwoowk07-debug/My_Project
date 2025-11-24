@@ -88,5 +88,16 @@ class Reviews:
     """
     Модель для таблицы Reviews
     Поля:
-
+    - REVIEWS_ID: идентификатор отзыва
+    - BOOK_ID: идентификатор книги
+    - Review: отзыв
+    - Score: оценка
     """
+    def __init__(self, REVIEWS_ID, BOOK_ID, Review, Score):
+        self.REVIEWS_ID = REVIEWS_ID
+        self.BOOK_ID = BOOK_ID
+        self.Review = Review
+        self.Score = Score
+
+
+
