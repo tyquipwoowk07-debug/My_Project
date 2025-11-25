@@ -51,6 +51,7 @@ def main():
             if user_id:
                 print(f"Здравствуй, {login}!")
                 user_act.Looking_users_booking(user_id=user_id)
+                break
             else:
                 print('Указан некорректный логин или пароль.\n')
         elif choice == "3":
@@ -158,63 +159,64 @@ def main():
                 print('\n')
             elif choice == "0":
                 print("Выход из программы...")
+                lib_act.close()
                 break
         else:
+            print("\n**** Выберите действие ****")
+            print("1 - Взять книгу")
+            print("2 - Поиск книг по автору \ названию \ ключевому слову")
+            print("3 - Посмотреть каталог")
+            print("4 - Просмотреть отзывы")
+            print("5 - Оставить отзыв")
+            print("0 - Выход (я устал, я ухожу)")
             while True:
-                print("\n**** Выберите действие ****")
-                print("1 - Взять книгу")
-                print("2 - Поиск книг по автору \ названию \ ключевому слову")
-                print("3 - Посмотреть каталог")
-                print("4 - Просмотреть отзывы")
-                print("5 - Оставить отзыв")
-                print("0 - Выход (я устал, я ухожу)")
-                while True:
-                    choice = input("Ваш выбор: ")
-                    if choice.isdigit():
-                        if 0 > int(choice) or int(choice)>5:
-                            print("Ошибка! Попробуйте ещё раз.")
-                        else:
-                            break
+                choice = input("Ваш выбор: ")
+                if choice.isdigit():
+                    if 0 > int(choice) or int(choice)>5:
+                        print("Ошибка! Попробуйте ещё раз.")
                     else:
-                        print("Ошибка! Команда не найдена.")
-                if choice == "1":
-                    print("\n**** Взять книгу ****")
-                    while True:
-                        if user_act.take_book(user_id=user_id):
+                        break
+                else:
+                    print("Ошибка! Команда не найдена.")
+            if choice == "1":
+                print("\n**** Взять книгу ****")
+                while True:
+                    if user_act.take_book(user_id=user_id):
+                        break
+            if choice == "2":
+                user_act.SearchInformation(keyword = input("Введите слово для поиска: "))
+            if choice == "3":
+                print("*** Посмотреть каталог***")
+                user_act.looking_catalog()
+            if choice == "4":
+                print("*** Посмотреть отзывы***")
+                while True:
+                    try:
+                        id_book = int(input("Введите id книги: "))
+                        if user_act.check_book_id(book_id=id_book):
                             break
-                if choice == "2":
-                    user_act.SearchInformation(keyword = input("Введите слово для поиска: "))
-                if choice == "3":
-                    print("*** Посмотреть каталог***")
-                    user_act.looking_catalog()
-                if choice == "4":
-                    print("*** Посмотреть отзывы***")
-                    while True:
-                        try:
-                            id_book = int(input("Введите id книги: "))
-                            if user_act.check_book_id(book_id=id_book):
-                                break
-                        except:
-                            print('Некорректный ввод, попробуйте еще раз!')
-                    user_act.looking_reviews(book_id = id_book)
-                if choice == "5":
-                    print("*** Оставить отзыв ***")
-                    while True:
-                        try:
-                            id_book = int(input("Введите id книги: "))
-                            if user_act.check_book_id(book_id=id_book):
-                                break
-                        except:
-                            print('Некорректный ввод, попробуйте еще раз!')
-                    text_for_review = str(input("Напишите отзыв: "))
-                    while True:
-                        score = int(input("Оцените книгу по 5-ти балльной шкале: "))
-                        if 0<=score<=5:
+                    except:
+                        print('Некорректный ввод, попробуйте еще раз!')
+                user_act.looking_reviews(book_id = id_book)
+            if choice == "5":
+                print("*** Оставить отзыв ***")
+                while True:
+                    try:
+                        id_book = int(input("Введите id книги: "))
+                        if user_act.check_book_id(book_id=id_book):
                             break
-                    user_act.Review(book_id = id_book, review_text = text_for_review, score=score)
-                elif choice == "0":
-                    print("Выход из программы...")
-                    break
+                    except:
+                        print('Некорректный ввод, попробуйте еще раз!')
+                text_for_review = str(input("Напишите отзыв: "))
+                while True:
+                    score = int(input("Оцените книгу по 5-ти балльной шкале: "))
+                    if 0<=score<=5:
+                        break
+                user_act.Review(book_id = id_book, review_text = text_for_review, score=score)
+            elif choice == "0":
+                print("Выход из программы...")
+                user_act.close()
+                break
 
 if __name__ == "__main__":
     main()
