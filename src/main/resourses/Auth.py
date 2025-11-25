@@ -38,7 +38,8 @@ class Authorization:
         row = self.cursor.fetchone()
         if row:
             return row['User_ID']
-        return None
+        else:
+            return False
 
     ''' Добавление нового пользователя'''
 

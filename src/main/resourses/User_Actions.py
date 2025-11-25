@@ -113,8 +113,12 @@ class LibrarianActions:
                                 b.Current_Status = ?
                         ''', (4,))
         books = self.cursor.fetchall()
+        if not books:
+            print('Нет книг, выданных на руки')
+            return False
         for book in books:
             print(f"ID: {book[0]} | '{book[1]}' | Автор: {book[2]} | Статус: {book[3]} | Id читательской брони: {book[4]} | ID читателя: {book[5]} | ID выдачи: {book[6]}")
+        return True
     def Correct(self,bookid: int, choice1: int, val: str):
         '''
         Исправить опечатки и некорректные данные
@@ -126,6 +130,8 @@ class LibrarianActions:
             self.conn.commit()
         print("Данные обновлены!")
         return None
+    def close(self):
+        self.conn.close()
 class UserActions:
     def __init__(self, db_file: str = "mainDataBase.db"):
         self.conn = sqlite3.connect(db_file)
@@ -164,7 +170,7 @@ class UserActions:
         else:
             return True
     def take_book(self, user_id: int):
-        """Взять книгу с максимальной отладкой"""
+        """Взять книгу"""
         self.cursor.execute("SELECT BOOK_ID, Name, Author FROM Book WHERE Current_Status = '1'")
         available_books = self.cursor.fetchall()
         print(f"Найдено книг: {len(available_books)}")
@@ -255,7 +261,7 @@ class UserActions:
                 for review in reviews:
                     review_id, review_text, score = review
                     print(f"Отзыв ID: {review_id}")
-                    print(f"Оценка: {score}/10")
+                    print(f"Оценка: {score}/5")
                     print(f"Текст: {review_text}")
                     print("-" * 40)
         except Exception as e:
