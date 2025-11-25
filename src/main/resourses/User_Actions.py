@@ -261,7 +261,7 @@ class UserActions:
                 for review in reviews:
                     review_id, review_text, score = review
                     print(f"Отзыв ID: {review_id}")
-                    print(f"Оценка: {score}/10")
+                    print(f"Оценка: {score}/5")
                     print(f"Текст: {review_text}")
                     print("-" * 40)
         except Exception as e:
