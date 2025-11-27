@@ -50,7 +50,7 @@ class Authorization:
         self.cursor.executemany("INSERT INTO User (USER_ID, Login, Password) VALUES (?,?,?)", users)
         print(f"Пользователь с логином {Login} успешно добавлен! Ваш ID {USER_ID}.")
         self.conn.commit()
-        return None
+        return True
 
 def close(self):
     self.conn.close()
